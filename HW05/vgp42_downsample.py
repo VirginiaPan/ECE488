@@ -6,7 +6,7 @@ Created on Sun Feb  9 16:29:30 2020
 """
 import numpy as np
 
-def vgp4_downsample(im, factor):
+def vgp42_downsample(im, factor):
     #fft image
     freq_im = np.fft.fft2(im)
     #?? a+bj --> magnitude
@@ -26,15 +26,15 @@ def vgp4_downsample(im, factor):
     #build filter based on factor
     #exclue (multiply by 0) on things at freqs > 2x factor [Nyquist]
     #(same dimensions of filter and FT of im)
-    my_filter = np.ones((len(shifted_FreqCompRows),len(shifted_FreqCompCols)))
+    my_filter = np.ones((len(shifted_FreqCompRows),len(shifted_FreqCompCols)),dtype=np.bool)
     #Nested for loop still yield a rectangular filter (box)?
     nyquist = np.absolute(2*factor)
     for i in range(len(shifted_FreqCompRows)):
         if(np.abs(shifted_FreqCompRows[i])>=(1.0/nyquist)):
-            my_filter[i,:] = 0
+            my_filter[i,:] = False
     for j in range(len(shifted_FreqCompCols)):
         if(np.abs(shifted_FreqCompCols[j])>=(1.0/nyquist)):
-            my_filter[:,j] = 0
+            my_filter[:,j] = False
 #multiply freq_im and filter (in frequency domain)    
     filtered_im =  shifted_freq_im[my_filter]
     #filtered_im = shifted_freq_im
