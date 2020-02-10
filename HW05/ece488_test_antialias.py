@@ -60,6 +60,6 @@ def test_antialias(module):
 
 
 if __name__ == "__main__":
-    netid = 'vgp42'
+    netid = 'vgp4'
     module = importlib.import_module(f'{netid}_downsample')
     test_antialias(module)
