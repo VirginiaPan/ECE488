@@ -1,0 +1,215 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sunday, February 02, 2020 18:42:39}
+%TCIDATA{LastRevised=Tuesday, February 04, 2020 01:39:06}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+
+Virginia Pan
+
+ECE 488
+
+February 4, 2020
+
+Image Noise Homework
+
+$I_{1}\left[ u,v\right] =S_{1}\left[ u,v\right] +N_{1}\left[ u,v\right] $
+
+$I_{2}\left[ u,v\right] =S_{2}\left[ u,v\right] +N_{2}\left[ u,v\right] $
+
+$S_{2}\left[ u,v\right] =\frac{1}{2}S_{1}\left[ u,v\right] $
+
+$N_{i}\left[ u,v\right] \symbol{126}N(0,\sigma _{n}^{2})$
+
+Part 1
+
+a)
+
+SNR =$\frac{E\left( S\right) }{E\left( N\right) }$
+
+SNR$_{1}=\frac{E\left( S_{1}\right) }{E\left( N_{1}\right) }$
+
+SNR$_{2}=\frac{E\left( S_{2}\right) }{E\left( N_{2}\right) }=\frac{\frac{1}{4%
+}E\left( S_{1}\right) }{E\left( N_{2}\right) }=\frac{\frac{1}{4}E\left(
+S_{1}\right) }{E\left( N_{1}\right) }$
+
+\vspace{1pt}$E\left( N_{1}\right) =E\left( N_{2}\right) $
+
+\frame{$\frac{SNR_{1}}{SNR_{2}}=\frac{\frac{E\left( S_{1}\right) }{E\left(
+N_{1}\right) }}{\frac{\frac{1}{4}E\left( S_{1}\right) }{E\left( N_{1}\right) 
+}}=\allowbreak 4$}
+
+\vspace{1pt}the SNR of $I_{2}$ is one quarter the SNR of $I_{1}$
+
+b)
+
+if$E\left( I\right) =E\left( S\right) +E\left( N\right) $note, middle term
+goes away because mean of N is 0.
+
+$E\left( I_{1}\right) =E\left( S_{1}\right) +E\left( N_{1}\right) $
+
+$E\left( I_{2}\right) =E\left( S_{2}\right) +E\left( N_{2}\right) $
+
+$E\left( I_{2}\right) =E\left( \frac{1}{2}S_{1}\right) +E\left( N_{2}\right) 
+$
+
+$E\left( I_{2}\right) =\frac{1}{4}E\left( S_{1}\right) +E\left( N_{2}\right) 
+$
+
+$E\left( N_{1}\right) =E\left( N_{2}\right) $
+
+$E\left( I_{2}\right) =\frac{1}{4}E\left( S_{1}\right) +E\left( N_{1}\right) 
+$
+
+\frame{$\frac{E\left( I_{1}\right) }{E\left( I_{2}\right) }=\frac{E\left(
+S_{1}\right) +E\left( N_{1}\right) }{\frac{1}{4}E\left( S_{1}\right)
++E\left( N_{1}\right) }$}
+
+c) 
+
+$f\left( I\right) =I\times \sqrt{\frac{E\left( S_{1}\right) +E\left(
+N_{1}\right) }{\frac{1}{4}E\left( S_{1}\right) +E\left( N_{1}\right) }}$
+
+$\widehat{I}_{2}=f\left( I_{2}\right) =\sqrt{\frac{E\left( S_{1}\right)
++E\left( N_{1}\right) }{\frac{1}{4}E\left( S_{1}\right) +E\left(
+N_{1}\right) }}\left( S_{2}\left[ u,v\right] +N_{2}\left[ u,v\right] \right)
+=\sqrt{\frac{E\left( S_{1}\right) +E\left( N_{1}\right) }{\frac{1}{4}E\left(
+S_{1}\right) +E\left( N_{1}\right) }}\left( \frac{1}{2}S_{1}\left[ u,v\right]
++N_{1}\left[ u,v\right] \right) $
+
+$E\left( I_{1}\right) =E\left( \widehat{I}_{2}\right) $
+
+$E\left( S_{1}\right) +E\left( N_{1}\right) =E\left( \sqrt{\frac{E\left(
+S_{1}\right) +E\left( N_{1}\right) }{\frac{1}{4}E\left( S_{1}\right)
++E\left( N_{1}\right) }}\left( \frac{1}{2}S_{1}\left[ u,v\right] +N_{1}\left[
+u,v\right] \right) \right) $
+
+$=\sqrt{\frac{E\left( S_{1}\right) +E\left( N_{1}\right) }{\frac{1}{4}%
+E\left( S_{1}\right) +E\left( N_{1}\right) }}\frac{1}{M}\sum_{u,v}\left( 
+\frac{1}{2}S_{1}\left[ u,v\right] +N_{1}\left[ u,v\right] \right) ^{2}$
+
+$=\sqrt{\frac{E\left( S_{1}\right) +E\left( N_{1}\right) }{\frac{1}{4}%
+E\left( S_{1}\right) +E\left( N_{1}\right) }}^{2}\left( \frac{1}{4}E\left(
+S_{1}\right) +E(N_{1})\right) =E\left( S_{1}\right) +E\left( N_{1}\right)
+=E\left( S_{1}\right) +\sigma _{n}^{2}$
+
+$E\left[ E\left( N\right) \right] =\sigma _{n}^{2}$
+
+\frame{$f\left( I\right) =I\times \sqrt{\frac{E\left( S_{1}\right) +\sigma
+_{n}^{2}}{\frac{1}{4}E\left( S_{1}\right) +\sigma _{n}^{2}}}$}
+
+d)
+
+$RMSE\left( I_{i},S_{i}\right) =\left( \frac{1}{M}\sum_{u,v}\left( I_{i}%
+\left[ u,v\right] -S_{i}\left[ u,v\right] \right) ^{2}\right) ^{\frac{1}{2}}$
+
+$RMSE\left( I_{1},S_{1}\right) =\left( \frac{1}{M}\sum_{u,v}\left( I_{1}%
+\left[ u,v\right] -S_{1}\left[ u,v\right] \right) ^{2}\right) ^{\frac{1}{2}}$
+
+$I_{1}\left[ u,v\right] =S_{1}\left[ u,v\right] +N_{1}\left[ u,v\right] $
+
+$RMSE\left( I_{1},S_{1}\right) =\left( \frac{1}{M}\sum_{u,v}\left( S_{1}%
+\left[ u,v\right] +N_{1}\left[ u,v\right] -S_{1}\left[ u,v\right] \right)
+^{2}\right) ^{\frac{1}{2}}$
+
+$RMSE\left( I_{1},S_{1}\right) =\left( \frac{1}{M}\sum_{u,v}\left( N_{1}%
+\left[ u,v\right] \right) ^{2}\right) ^{\frac{1}{2}}$
+
+$RMSE\left( I_{1},S_{1}\right) =\left( E\left( N_{1}\right) \right) ^{\frac{1%
+}{2}}=\left( \sigma _{n}^{2}\right) ^{\frac{1}{2}}=\sigma _{n}$
+
+$E\left[ E\left( N\right) \right] =\sigma _{n}^{2}$
+
+\vspace{1pt}
+
+$RMSE\left( I_{2},S_{2}\right) =\left( \frac{1}{M}\sum_{u,v}\left( I_{2}%
+\left[ u,v\right] -S_{2}\left[ u,v\right] \right) ^{2}\right) ^{\frac{1}{2}}$
+
+$I_{2}\left[ u,v\right] =S_{2}\left[ u,v\right] +N_{2}\left[ u,v\right] $
+
+$RMSE\left( I_{2},S_{2}\right) =\left( \frac{1}{M}\sum_{u,v}\left( S_{2}%
+\left[ u,v\right] +N_{2}\left[ u,v\right] -S_{2}\left[ u,v\right] \right)
+^{2}\right) ^{\frac{1}{2}}$
+
+$RMSE\left( I_{2},S_{2}\right) =\left( \frac{1}{M}\sum_{u,v}\left( N_{2}%
+\left[ u,v\right] \right) ^{2}\right) ^{\frac{1}{2}}$
+
+$RMSE\left( I_{2},S_{2}\right) =\left( E\left( N_{2}\right) \right) ^{\frac{1%
+}{2}}=\left( \sigma _{n}^{2}\right) ^{\frac{1}{2}}=\sigma _{n}$
+
+$E\left[ E\left( N\right) \right] =\sigma _{n}^{2}$
+
+\vspace{1pt}
+
+$RMSE\left( \widehat{I}_{2},S_{1}\right) =\left( \frac{1}{M}\sum_{u,v}\left( 
+\widehat{I}_{2}\left[ u,v\right] -S_{1}\left[ u,v\right] \right) ^{2}\right)
+^{\frac{1}{2}}$
+
+$\widehat{I}_{2}=f\left( I_{2}\right) =\sqrt{\frac{E\left( S_{1}\right)
++\sigma _{n}^{2}}{\frac{1}{4}E\left( S_{1}\right) +\sigma _{n}^{2}}}\left(
+S_{2}\left[ u,v\right] +N_{2}\left[ u,v\right] \right) =\sqrt{\frac{E\left(
+S_{1}\right) +\sigma _{n}^{2}}{\frac{1}{4}E\left( S_{1}\right) +\sigma
+_{n}^{2}}}\left( \frac{1}{2}S_{1}\left[ u,v\right] +N_{1}\left[ u,v\right]
+\right) $
+
+$RMSE\left( \widehat{I}_{2},S_{1}\right) =\left( \frac{1}{M}\sum_{u,v}\left( 
+\sqrt{\frac{E\left( S_{1}\right) +\sigma _{n}^{2}}{\frac{1}{4}E\left(
+S_{1}\right) +\sigma _{n}^{2}}}\left( \frac{1}{2}S_{1}\left[ u,v\right]
++N_{1}\left[ u,v\right] \right) -S_{1}\left[ u,v\right] \right) ^{2}\right)
+^{\frac{1}{2}}$
+
+$RMSE\left( \widehat{I}_{2},S_{1}\right) =\left( \frac{1}{M}\sum_{u,v}\left( 
+\sqrt{\frac{E\left( S_{1}\right) +\sigma _{n}^{2}}{\frac{1}{4}E\left(
+S_{1}\right) +\sigma _{n}^{2}}}\frac{1}{2}S_{1}\left[ u,v\right] +\sqrt{%
+\frac{E\left( S_{1}\right) +\sigma _{n}^{2}}{\frac{1}{4}E\left( S_{1}\right)
++\sigma _{n}^{2}}}N_{1}\left[ u,v\right] -S_{1}\left[ u,v\right] \right)
+^{2}\right) ^{\frac{1}{2}}$
+
+\frame{$\frac{RMSE\left( \widehat{I}_{2},S_{1}\right) }{RMSE\left(
+I_{1},S_{1}\right) }=\frac{\left( \frac{1}{M}\sum_{u,v}\left( \sqrt{\frac{%
+E\left( S_{1}\right) +\sigma _{n}^{2}}{\frac{1}{4}E\left( S_{1}\right)
++\sigma _{n}^{2}}}\frac{1}{2}S_{1}\left[ u,v\right] +\sqrt{\frac{E\left(
+S_{1}\right) +\sigma _{n}^{2}}{\frac{1}{4}E\left( S_{1}\right) +\sigma
+_{n}^{2}}}N_{1}\left[ u,v\right] -S_{1}\left[ u,v\right] \right) ^{2}\right)
+^{\frac{1}{2}}}{\sigma _{n}}$}
+
+\qquad
+
+\end{document}

@@ -1,0 +1,111 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sunday, February 02, 2020 18:42:39}
+%TCIDATA{LastRevised=Sunday, February 02, 2020 19:12:26}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+Virginia Pan
+
+ECE 488
+
+February 2, 2020
+
+Image Noise Homework
+
+$I_{1}\left[ u,v\right] =S_{1}\left[ u,v\right] +N_{1}\left[ u,v\right] $
+
+$I_{2}\left[ u,v\right] =S_{2}\left[ u,v\right] +N_{2}\left[ u,v\right] $
+
+$S_{2}\left[ u,v\right] =\frac{1}{2}S_{1}\left[ u,v\right] $
+
+$N_{i}\left[ u,v\right] \symbol{126}N(0,\sigma _{n}^{2})$
+
+Part 1
+
+a)
+
+SNR =$\frac{E\left( S\right) }{E\left( N\right) }$
+
+SNR$_{1}=\frac{E\left( S_{1}\right) }{E\left( N_{1}\right) }$
+
+SNR$_{2}=\frac{E\left( S_{2}\right) }{E\left( N_{2}\right) }=\frac{\frac{1}{4%
+}E\left( S_{1}\right) }{E\left( N_{2}\right) }=\frac{\frac{1}{4}E\left(
+S_{1}\right) }{E\left( N_{1}\right) }$
+
+\vspace{1pt}$E\left( N_{1}\right) =E\left( N_{2}\right) $
+
+$\frac{SNR_{1}}{SNR_{2}}=\frac{\frac{E\left( S_{1}\right) }{E\left(
+N_{1}\right) }}{\frac{\frac{1}{4}E\left( S_{1}\right) }{E\left( N_{1}\right) 
+}}=\allowbreak 4$
+
+\vspace{1pt}the SNR of $I_{2}$ is one quarter the SNR of $I_{1}$
+
+b)
+
+if$E\left( I\right) =E\left( S\right) +E\left( N\right) $
+
+$E\left( I_{1}\right) =E\left( S_{1}\right) +E\left( N_{1}\right) $
+
+$E\left( I_{2}\right) =E\left( S_{2}\right) +E\left( N_{2}\right) $
+
+$E\left( I_{2}\right) =E\left( \frac{1}{2}S_{1}\right) +E\left( N_{2}\right) 
+$
+
+$E\left( I_{2}\right) =\frac{1}{4}E\left( S_{1}\right) +E\left( N_{2}\right) 
+$
+
+$E\left( N_{1}\right) =E\left( N_{2}\right) $
+
+$E\left( I_{2}\right) =\frac{1}{4}E\left( S_{1}\right) +E\left( N_{1}\right) 
+$
+
+$\frac{E\left( I_{1}\right) }{E\left( I_{2}\right) }=\frac{E\left(
+S_{1}\right) +E\left( N_{1}\right) }{\frac{1}{4}E\left( S_{1}\right)
++E\left( N_{1}\right) }$
+
+c)
+
+d)
+
+\qquad 
+
+\end{document}
